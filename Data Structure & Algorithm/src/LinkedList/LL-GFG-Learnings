@@ -1,0 +1,288 @@
+Detect loop--------------------------------------------
+
+Node p = head;
+        Node q = head;
+        while(p.next!=null && p.next.next!=null)
+        {
+            q = q.next;
+            p=p.next.next;
+            
+            if(p==q)
+            {
+                return true;
+            }
+            
+        }
+        return false;
+        
+Detect loop--------------------------------------------
+
+Nth node from end of linked list---------------------------
+
+Node p = head;
+    	int k = 0;
+    	
+    	while(p!=null)
+    	{
+    	    k++;
+    	    p = p.next;
+    	}
+    	if(n>k)
+    	{
+    	    return -1;
+    	}
+    	p = head;
+    	for(int i=0;i<k-n;i++)
+    	{
+    	    p = p.next;
+    	}
+    	    return p.data;
+    	    
+Nth node from end of linked list---------------------------  
+
+Delete without head pointer-----------------------------
+
+void deleteNode(Node del)
+    {
+         // Your code here
+         del.data = del.next.data;
+         del.next = del.next.next;
+    }
+
+Delete without head pointer-----------------------------
+
+Modular Node--------------------------------------------
+"A modular node is the last node of the linked list whose Index is divisible by the number k, i.e. i%k==0."
+
+public static int moduarNode(Node head, int k)
+    {
+        // add your code here
+        Node temp = head;
+       int i = 1;
+       int res = -1;
+       while(temp != null)
+       {
+           if(i%k == 0)
+           {
+              res = temp.data; 
+           }
+           temp = temp.next;
+           i++;
+       }
+       return res;
+    }
+    
+Modular Node--------------------------------------------  
+
+
+Find the Sum of Last N nodes of the Linked List------------------------------------------------
+
+public int sum(Node head, int k){
+      //write code here
+      Node p = head;
+      int n=0;
+      int sum =0;
+      while(p!=null)
+      {
+          n++;
+          p = p.next;
+      }
+      
+      p = head;
+      for(int i =0;i<n-k;i++)
+      {
+          p = p.next;
+      }
+      while(p!=null)
+      {
+          sum = sum+p.data;
+          p = p.next;
+          
+      }
+      return sum;
+    }
+    
+Find the Sum of Last N nodes of the Linked List------------------------------------------------   
+ 
+ public int sum(Node head, int k){
+      //write code here
+      Node p = head;
+      int n=0;
+      int sum =0;
+      while(p!=null)
+      {
+          n++;
+          p = p.next;
+      }
+      
+      p = head;
+      for(int i =0;i<n-k;i++)
+      {
+          p = p.next;
+      }
+      while(p!=null)
+      {
+          sum = sum+p.data;
+          p = p.next;
+          
+      }
+      return sum;
+    }
+    
+Find the Sum of Last N nodes of the Linked List------------------------------------------------  
+
+Pairwise swap elements of a linked list------------------------------------------------------
+
+public Node pairwiseSwap(Node head)
+    {
+        // code here
+        Node forword  = head.next, backword = head, tempBack = null, tempForword = null;
+        
+        while(backword != null && forword != null){
+            tempForword = forword;
+            tempBack = backword;
+    
+            tempBack.next = tempForword.next;
+            tempForword.next = tempBack;
+            
+            if(backword == head) head = tempForword;
+            
+            backword = tempBack.next;
+            if(backword != null && backword.next != null) {
+                forword = backword.next;
+                tempBack.next = forword;
+            } else {
+                forword = null;
+            }
+        }
+        return head;
+    }
+
+Pairwise swap elements of a linked list------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+	    
