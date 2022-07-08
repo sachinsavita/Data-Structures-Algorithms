@@ -2,15 +2,17 @@ package Stack;
 
 public class StackClassArray {
 	
-	
+	//Defines stack class
 	static class Stack
 	{
 		int size=5;
 		int top = -1;
 		int S[] = new int[size];
 		
+		//Push
 		public void push(int x)
 		{
+			//isFull()
 			if(top==size-1)
 			{
 				System.out.println("Stack is overflow.");
@@ -23,9 +25,12 @@ public class StackClassArray {
 			}
 		}
 		
+		//Pop
 		public int pop()
 		{
 			int x = -1;
+			
+			//isEmpty()
 			if(top==-1)
 			{
 				System.out.println("Stack is underflow.");

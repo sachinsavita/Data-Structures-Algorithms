@@ -84,8 +84,8 @@ public class StackClassLL {
 		s.push(12);
 		s.push(3);
 		s.push(34);
-                s.push(55);
-                s.push(44);
+        s.push(55);
+        s.push(44);
 //		System.out.println(s.pop());
 //		System.out.println(s.pop());
 //		System.out.println(s.pop());
@@ -96,8 +96,6 @@ public class StackClassLL {
 		
 		
 		System.out.println("Smaller elemet in the stack is: "+smaller);
-		
-//Added folder to eclipse
 	}
 
 }
