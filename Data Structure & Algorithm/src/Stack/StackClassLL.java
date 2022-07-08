@@ -97,7 +97,7 @@ public class StackClassLL {
 		
 		System.out.println("Smaller elemet in the stack is: "+smaller);
 		
-
+//Added folder to eclipse
 	}
 
 }
