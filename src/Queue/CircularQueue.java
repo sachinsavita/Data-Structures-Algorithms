@@ -7,7 +7,7 @@ public class CircularQueue {
 		static class Queue
 		{
 			
-				static int size = 0;
+				static int size;
 				static int arr[] = new int[size];
 				static int Rear = -1;
 				static int front = -1;
@@ -25,7 +25,7 @@ public class CircularQueue {
 			//isEmpty()
 			public static boolean isEmpty()
 			{
-				return front==Rear;
+				return Rear==front;
 			}
 			
 			//isFull
@@ -55,17 +55,23 @@ public class CircularQueue {
 			public static int dequeue()
 			{
 				int x = -1;
-				if(front == Rear) {   //return Rear == front;
+				if(isEmpty()) {   //return Rear == front;
 					
 					System.out.println("Queue is empty......");
 					return -1;
 				}
+				x = arr[front];
 				
+				if(Rear==front)
+				{
+					Rear = front = -1;
+				}
 				else
 				{
+					
 					front = (front+1)%size;
-					 x = arr[front];
-//					System.out.println("Dequeuing..... "+x );
+					 
+					System.out.println("Dequeuing..... "+x );
 					
 				}
 				return x;
@@ -109,7 +115,6 @@ public class CircularQueue {
 		      
 		      while(!Queue.isEmpty())
 		      {
-		    	  System.out.println(Queue.peek());
 		    	  Queue.dequeue();
 		      }
 		      
