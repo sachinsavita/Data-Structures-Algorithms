@@ -38,7 +38,7 @@ public class CreatingBinaryTree {
 		}
 	}
 
-	//Preorder
+	//Preorder traversal 
 	public static void preOrder(Node root)
 	{
 		if(root==null)
@@ -50,7 +50,7 @@ public class CreatingBinaryTree {
 		preOrder(root.right);
 	}
 	
-	//Inorder
+	//Inorder traversal
 	public static void inOrder(Node root)
 	{
 		if(root==null)
@@ -63,7 +63,7 @@ public class CreatingBinaryTree {
 		inOrder(root.right);
 	}
 	
-	//Postorder
+	//Postorder traversal
 		public static void postOrder(Node root)
 		{
 			if(root==null)
@@ -78,7 +78,7 @@ public class CreatingBinaryTree {
 			System.out.println(root.data+" ");
 		}
 		
-		//Levelorder  (Different, will do it iteratively)
+  //Levelorder  (Different, will do it iteratively)
 				public static void levelOrder(Node root)
 				{
 					if(root==null)
@@ -171,12 +171,57 @@ public class CreatingBinaryTree {
 //						return rightTreeHeight+1;
 				} 
 				
+	//Diameter
+				public static int diameter(Node root) {
+				       if(root == null) {
+				           return 0;
+				       }
+				 
+				       int diam1 = heightOfTree(root.left) + heightOfTree(root.right) + 1;
+				       int diam2 = diameter(root.left);
+				       int diam3 = diameter(root.right);
+				 
+				       return Math.max(diam1, Math.max(diam2, diam3));
+				   }
+  //Second approach to calculate diameter
+				static class TreeInfo
+				{
+					int ht;
+					int diam;
+					
+					TreeInfo(int ht, int diam)
+					{
+						this.diam = diam;
+						this.ht = ht;
+					}
+				}
+	//Diameter2		
+				public static TreeInfo diameter2(Node root) {
+				       if(root == null) {
+				           return new TreeInfo(0, 0);
+				       }
+				 
+				       TreeInfo left = diameter2(root.left);
+				       TreeInfo right = diameter2(root.right);
+				 
+				       int myHeight = Math.max(left.ht, right.ht) + 1;
+				 
+				       int diam1 = left.ht + right.ht + 1;
+				       int diam2 = left.diam;
+				       int diam3 = right.diam;
+				 
+				       int myDiam = Math.max(diam1, Math.max(diam2, diam3));
+				 
+				       return new TreeInfo(myHeight, myDiam);
+				   }
+
+				
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
 		BinaryTree tree = new BinaryTree();
 		Node root = tree.buildTree(nodes);
-		System.out.println(heightOfTree(root));
+		System.out.println(diameter2(root));
 
 	}
 
