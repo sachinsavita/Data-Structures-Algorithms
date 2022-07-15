@@ -21,7 +21,7 @@ public class InsertAtPosition {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the key: ");
 	    int key = sc.nextInt();
-	    System.out.println("Enter the index (< 9) at which you want to insert: ");
+	    System.out.println("Enter the index (< 20) at which you want to insert: ");
 	    int index = sc.nextInt();
 	    if(a[index] == 0)
 	    {
