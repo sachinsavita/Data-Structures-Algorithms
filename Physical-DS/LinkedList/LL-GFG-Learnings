@@ -72,7 +72,7 @@ public static int moduarNode(Node head, int k)
        return res;
     }
     
-Modular Node--------------------------------------------  
+
 
 
 Find the Sum of Last N nodes of the Linked List------------------------------------------------
@@ -102,32 +102,6 @@ public int sum(Node head, int k){
       return sum;
     }
     
-Find the Sum of Last N nodes of the Linked List------------------------------------------------   
- 
- public int sum(Node head, int k){
-      //write code here
-      Node p = head;
-      int n=0;
-      int sum =0;
-      while(p!=null)
-      {
-          n++;
-          p = p.next;
-      }
-      
-      p = head;
-      for(int i =0;i<n-k;i++)
-      {
-          p = p.next;
-      }
-      while(p!=null)
-      {
-          sum = sum+p.data;
-          p = p.next;
-          
-      }
-      return sum;
-    }
     
 
 
@@ -217,6 +191,27 @@ public static Node reverseDLL(Node  head)
 }
 
 
+Count Pairs whose sum is equal to X------------------------------------------------
+
+public static int countPairs(LinkedList<Integer> head1, LinkedList<Integer> head2,
+                          int x) {
+        // add your code here
+        HashSet<Integer> ll = new HashSet<>();
+        int count = 0;
+        
+        for(int i=0;i<head1.size();i++)
+        {
+            ll.add(x-head1.get(i));
+        }
+        
+        for(int i=0;i<head2.size();i++)
+        {
+            if(ll.contains(head2.get(i)))
+            count++;
+        }
+        
+        return count;
+    }
 
 
 
