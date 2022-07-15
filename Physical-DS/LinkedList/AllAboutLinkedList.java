@@ -240,7 +240,7 @@ public class AllAboutLinkedList {
 				}
 			}
 			
-			//Reversing a linked l ist
+			//Reversing a linked list
 			public void reverseLL()
 			{
 				Node p =  head;
