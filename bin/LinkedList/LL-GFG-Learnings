@@ -214,7 +214,74 @@ public static int countPairs(LinkedList<Integer> head1, LinkedList<Integer> head
     }
 
 
+Sorted insert for circular linked list===============================================================
 
+public static Node sortedInsert(Node head,int data)
+         {
+            //add code here.
+            Node newNode = new Node(data);
+            Node p = head;
+            if(head.data>=data)
+            {
+                while(p.next!=head)
+                {
+                    p = p.next;
+                }
+                
+                newNode.next = head;
+                p.next = newNode;
+                head = newNode;
+            }
+            
+            else
+            {
+                Node q = head;
+                while(p.next!=head)
+                {
+                    if(p.data>=data)
+                    {
+                        newNode.next = q.next;
+                        q.next = newNode;
+                        return head;
+                    }
+                    q = p;
+                    p = p.next;
+                }
+            }
+            return head;
+            
+         }
+         
+Intersection of two sorted Linked lists====================================================================
+
+public static Node findIntersection(Node head1, Node head2)
+    {
+        // code here.
+        Node dummy = new Node(0);
+        Node temp = dummy;
+        Node p1 = head1;
+        Node p2 = head2;
+        
+        while(p1 != null && p2 != null)
+        {
+            if(p1.data < p2.data)
+            p1 = p1.next;
+            else if(p1.data > p2.data)
+            p2 = p2.next;
+            else{
+                Node node = new Node(p1.data);
+                temp.next = node;
+                temp = temp.next;
+                p1 = p1.next;
+                p2 = p2.next;
+            }
+        }
+        return dummy.next;
+       
+    }
+    
+    
+    
 
 
 

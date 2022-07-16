@@ -39,7 +39,7 @@ public class BSTusingRecursion {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int [] a = {0,2,3,5,7,8,9,12,34,56,78,89};
-		int key = 0;
+		int key = 12;
 		int n = a.length;
 		
 		System.out.println(n);
