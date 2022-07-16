@@ -1,0 +1,22 @@
+Reverse a Doubly Linked List----------------------------------------------------------
+
+
+public static Node reverseDLL(Node  head)
+{
+    //Your code here
+    Node p = head;
+    
+    while(p!=null)
+    {
+        if(p.next==null)
+        {
+        head = p;
+        }
+        Node temp = p.next;
+        p.next = p.prev;
+        p.prev = temp;
+        
+        p = p.prev;
+    }
+    return head;
+}

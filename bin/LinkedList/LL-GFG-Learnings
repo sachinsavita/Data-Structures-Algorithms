@@ -15,7 +15,6 @@ Node p = head;
         }
         return false;
         
-Detect loop--------------------------------------------
 
 Nth node from end of linked list---------------------------
 
@@ -49,7 +48,7 @@ void deleteNode(Node del)
          del.next = del.next.next;
     }
 
-Delete without head pointer-----------------------------
+
 
 Modular Node--------------------------------------------
 "A modular node is the last node of the linked list whose Index is divisible by the number k, i.e. i%k==0."
@@ -221,6 +220,40 @@ public static Node findIntersection(Node head1, Node head2)
     }
     
     
+Remove every k'th node======================================================================
+
+    
+    Node delete(Node head, int k)
+    {
+	// Your code here
+	Node p = head; 
+	Node q = null;
+	    int a = 1;
+	    if(k == 1) 
+	    return null;
+	    while(p!= null){
+	        if(a == k)
+	        {
+	            a = 1;
+	            q.next = p.next;
+	            if(q!= null)
+	            {
+	                p = q.next;
+	            }
+	            else 
+	            {
+	                p = null;
+	            }
+	        }
+	        else 
+	        {
+	            q = p;
+	            p = p.next;
+	            a++;
+	        }
+	    }
+	    return head;
+    }
     
 
 

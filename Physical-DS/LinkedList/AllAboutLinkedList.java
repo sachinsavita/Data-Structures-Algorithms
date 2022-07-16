@@ -282,9 +282,17 @@ public class AllAboutLinkedList {
 			}
 			
 			//Find middle node
-			public void findMid()
+			public int findMid(Node head)
 			{
+				Node p = head;
+				Node q = head;
+				while(p!=null && p.next!=null)
+				{
+					p = p.next.next;
+					q=q.next;
+				}
 				
+				return q.data;
 			}
 			
 	
@@ -338,6 +346,8 @@ public class AllAboutLinkedList {
 		obj.reverseLL();
 		System.out.println("Reversing LL....................................................................................");
 		obj.displayLL();
+		
+		System.out.println(obj.findMid(head));
 		
 
 	}
