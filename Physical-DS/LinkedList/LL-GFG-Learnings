@@ -167,30 +167,6 @@ Node sortedInsert(Node head1, int key) {
      
 
 
-Reverse a Doubly Linked List----------------------------------------------------------
-
-
-public static Node reverseDLL(Node  head)
-{
-    //Your code here
-    Node p = head;
-    
-    while(p!=null)
-    {
-        if(p.next==null)
-        {
-        head = p;
-        }
-        Node temp = p.next;
-        p.next = p.prev;
-        p.prev = temp;
-        
-        p = p.prev;
-    }
-    return head;
-}
-
-
 Count Pairs whose sum is equal to X------------------------------------------------
 
 public static int countPairs(LinkedList<Integer> head1, LinkedList<Integer> head2,
@@ -214,43 +190,7 @@ public static int countPairs(LinkedList<Integer> head1, LinkedList<Integer> head
     }
 
 
-Sorted insert for circular linked list===============================================================
 
-public static Node sortedInsert(Node head,int data)
-         {
-            //add code here.
-            Node newNode = new Node(data);
-            Node p = head;
-            if(head.data>=data)
-            {
-                while(p.next!=head)
-                {
-                    p = p.next;
-                }
-                
-                newNode.next = head;
-                p.next = newNode;
-                head = newNode;
-            }
-            
-            else
-            {
-                Node q = head;
-                while(p.next!=head)
-                {
-                    if(p.data>=data)
-                    {
-                        newNode.next = q.next;
-                        q.next = newNode;
-                        return head;
-                    }
-                    q = p;
-                    p = p.next;
-                }
-            }
-            return head;
-            
-         }
          
 Intersection of two sorted Linked lists====================================================================
 

@@ -1,0 +1,37 @@
+Sorted insert for circular linked list===============================================================
+
+public static Node sortedInsert(Node head,int data)
+         {
+            //add code here.
+            Node newNode = new Node(data);
+            Node p = head;
+            if(head.data>=data)
+            {
+                while(p.next!=head)
+                {
+                    p = p.next;
+                }
+                
+                newNode.next = head;
+                p.next = newNode;
+                head = newNode;
+            }
+            
+            else
+            {
+                Node q = head;
+                while(p.next!=head)
+                {
+                    if(p.data>=data)
+                    {
+                        newNode.next = q.next;
+                        q.next = newNode;
+                        return head;
+                    }
+                    q = p;
+                    p = p.next;
+                }
+            }
+            return head;
+            
+         }

@@ -48,8 +48,7 @@ public class BSTusingRecursion {
 		if(result == 0)
 		{
 			System.out.println("Element not in the array.");
-			
-			
+		
 		}
 		else
 			System.out.println("Element at index: "+result);
