@@ -1,5 +1,5 @@
 package Array;
-
+//0th element to last
 public class LeftRotation {
 
 	public static void main(String[] args) {
