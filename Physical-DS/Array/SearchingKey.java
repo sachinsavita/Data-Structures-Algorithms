@@ -9,7 +9,7 @@ public class SearchingKey {
 		int count = 0;
 		for(int i=0;i<A.length;i++)
 		{
-			if(A[i]==key)
+			if(A[i]==key) //Focus
 			{
 				System.out.println("Element is at position : "+i);
 				count++;
