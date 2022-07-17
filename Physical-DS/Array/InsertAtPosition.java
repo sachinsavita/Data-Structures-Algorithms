@@ -28,7 +28,7 @@ public class InsertAtPosition {
 	    	a[index] = key;
 	    }
 	    else
-	    	for(int i=a.length-1;i>=index;i--)
+	    	for(int i=a.length-1;i>=index;i--) //Focus
 	    	{
 	    	   // a[i+1]	 = a[i];
 	    	    //or

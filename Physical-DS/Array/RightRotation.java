@@ -13,13 +13,13 @@ public class RightRotation {
 			System.out.print(x+"/"+a[x]+",");
 		}
 		 
-		int last =a[a.length-1];
+		int last =a[a.length-1];    //Focus
 		
 		for(int i=a.length-2;i>=0;i--)
 		{
 		   a[i+1] = a[i];
 		}
-		a[0] = last;
+		a[0] = last;    //Focus
 		System.out.println();
         System.out.print("index/value after rotation: ");
 		
