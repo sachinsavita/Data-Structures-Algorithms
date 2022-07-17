@@ -6,7 +6,7 @@ public class LeftRotation {
 		// TODO Auto-generated method stub
 		int a[] = {3,9,6,2,5,7,11,16};
 		System.out.println("Length of the array: "+a.length);
-		System.out.print("index/value Before rotating: ");
+		System.out.print("index/value Before rotating ");
 		
 		for(int x=0;x<a.length;x++)
 		{
