@@ -54,7 +54,7 @@ public class QuickSortMiddle {
 	{
 		for(int i: arr)
 		{
-			System.out.print(i+" ");
+			System.out.print(i+"  ");
 		}
 	}
 	
