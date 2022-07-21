@@ -3,14 +3,10 @@ public class Test {
 	
 	public static void main(String args[])
 	{
-		int n = 192;
-		long multi2 = n*2;
-        long multi3 = n*3;
-        
-        String str = String.valueOf(n);
-        str = str+multi2+multi3;
-        
-        System.out.println(str);
-	}
+		int a[] = {5,3,1,7};
+		int b[] = {2,4,6};
+		
+		
+ 	}
 
 }
