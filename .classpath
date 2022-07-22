@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Physical-DS"/>
 	<classpathentry kind="src" path="Logical-DS"/>
+	<classpathentry kind="src" path="LoveBabbarSheet"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
