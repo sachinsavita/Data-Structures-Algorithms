@@ -1,5 +1,8 @@
 package Array;
 
+//Best case: O(1)--- Element is at first posittion
+//Worst case: Element not found or found at last index O(n)
+
 public class SearchingKey {
 
 	public static void main(String[] args) {
