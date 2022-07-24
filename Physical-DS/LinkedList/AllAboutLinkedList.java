@@ -25,10 +25,10 @@ public class AllAboutLinkedList {
 	
 	public void addAtFirst(int data)
 	{
-		Node t = new Node(data);
-		t.next = head;
-		head = t;
-		System.out.println("Node is added at first! "+ t.data);
+		Node newNode = new Node(data);
+		newNode.next = head;
+		head = newNode;
+		System.out.println("Node with data " + newNode.data+ " is added at first! ");
 		size++;
 	}
 	
@@ -74,7 +74,7 @@ public class AllAboutLinkedList {
 		Node p = head;
 		while(p.next!=null)
 		{
-			p=p.next;
+			p=p.next;           //just traverse till the last node and ass new node
 		}
 		p.next = newNode;
 		System.out.println("Node added at last: "+x);
@@ -138,7 +138,7 @@ public class AllAboutLinkedList {
 	{
 		int max = 0;
 		Node p = head;
-		while(p.next!=null)
+		while(p!=null)
 		{
 			if(p.data>max)
 			{
@@ -147,7 +147,7 @@ public class AllAboutLinkedList {
 			p = p.next;
 		}
 		
-		System.out.println(max);
+		System.out.println("maximum value node is: " +max);
 	}
 
 	//Deleting firstNode

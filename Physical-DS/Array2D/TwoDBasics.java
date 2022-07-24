@@ -22,7 +22,7 @@ public class TwoDBasics {
 			} 
 			System.out.println();
 		}
-		System.out.println("....................................................");
+		System.out.println("...................................................");
 		//Using for each
 		for(int x[] : a)
 		{
