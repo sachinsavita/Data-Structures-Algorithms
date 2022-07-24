@@ -21,7 +21,7 @@ public class CheckArraySorted {
 			System.out.println("Sorted");
 		}
 		else
-			System.out.println("Array Not Sorted");
+			System.out.println("Not Sorted");
 	}
 
 }
