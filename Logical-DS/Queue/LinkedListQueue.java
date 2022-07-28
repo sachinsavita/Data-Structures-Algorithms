@@ -15,14 +15,14 @@ public class LinkedListQueue {
 		//Defining Queue
 		static class Queue
 		{
-			static Node head = null;  //Head
-			static Node tail = null;   //Tail
+			static Node head = null;  //front
+			static Node tail = null;   //rear
 		
 		
 		//isEmpty()
 		public static boolean isEmpty()
 		{
-			return head == null && tail == null;
+			return head == null && tail == null;      
 		}
 		
 		//Enqueue
@@ -37,7 +37,7 @@ public class LinkedListQueue {
 		    }
 		    else {
 		    tail.next = t;
-		    tail = t;
+		    tail = tail.next;
 		    System.out.println(data+" added @ position: "+tail);
 		    }
 		}

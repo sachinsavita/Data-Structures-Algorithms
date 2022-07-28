@@ -3,7 +3,7 @@ package Stack;
 public class StackClassLL {
 	
 	static int smaller = 0;
-	
+	public static Node top;
 	static class Node
 	{
 		int data;
@@ -18,7 +18,7 @@ public class StackClassLL {
 	static class Stack
 	{
 		
-		public static Node top;
+		
 		//ISEMPTY()
 		public static boolean isEmpty()
 		{
@@ -93,8 +93,13 @@ public class StackClassLL {
 //		System.out.println(s.pop());
 		
 //		System.out.println(s.peek());
+        Node p =top;
+        while(p!=null) {
+        	System.out.print(p.data+" ");
+        	p = p.next;
+        }
 		
-		
+		System.out.println();
 		System.out.println("Smaller elemet in the stack is: "+smaller);
 	}
 

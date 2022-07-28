@@ -43,6 +43,28 @@ public class StackClassArray {
 			}
 			return x;
 		}
+		
+		//Peek
+		public int peek()
+		{
+			if(top<0)
+			{
+				return -1;
+			}
+			return S[top];
+		}
+		
+		//isEmpty
+		public void isEmpty()
+		{
+			if(top<0)
+			
+				System.out.println("Stack is empty.");
+			
+
+			else
+				System.out.println("Not empty");
+		}
 	}
 	
 	
@@ -62,10 +84,14 @@ public class StackClassArray {
 		System.out.println(st.pop());
 		System.out.println(st.pop());
 		System.out.println(st.pop());
+		System.out.println("Peek "+st.peek());
 		System.out.println(st.pop());
 		System.out.println(st.pop());
 		System.out.println(st.pop());
 		
+		System.out.println("Peek "+st.peek());
+		st.push(5);
+		st.isEmpty();
 		
 
 	}
