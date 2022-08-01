@@ -9,7 +9,7 @@ public class MergeTwoArrays {
 		// TODO Auto-generated method stub
 
 		int A[] = { 3, 8, 16, 20, 25 };
-		int B[] = { 4, 10, 12, 18, 23 }; 
+		int B[] = { 4, 8, 12, 18, 23 }; 
 
 		int C[] = new int[A.length + B.length];
 
@@ -20,15 +20,22 @@ public class MergeTwoArrays {
 		{
 			
 				if (A[i] < B[j]) {
-					C[k++] = A[i++];
+					C[k] = A[i];
+					k++;
+					i++;
 					
 				}
 				else {
-					C[k++] = B[j++];
+					C[k] = B[j];
+					k++;
+					j++;
 					
 				}
 			
 		}
+		
+		//if elements left in any array.
+		
 		for(;i<A.length;i++)
 		{
 			C[k++] = A[i];

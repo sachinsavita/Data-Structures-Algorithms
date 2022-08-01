@@ -1,4 +1,4 @@
-package Array;
+package Array.SetOperations;
 
 //Union into third array
 //Two conditions

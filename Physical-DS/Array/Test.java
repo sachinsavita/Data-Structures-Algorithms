@@ -1,5 +1,6 @@
 package Array;
 
+import java.util.Arrays;
 import java.util.Collection;
 
 public class Test {
@@ -7,36 +8,22 @@ public class Test {
 	public static void main(String args[])
 	{
 		
-		String x = "aabbaa";
+		 
+		int A[] = {1,2,3,4,5};
+		int B[] = new int [10];
 		
-		int length = x.length();
-		System.out.println(length);
-        int start = 0;
-        int end = length-1;
-        
-        System.out.println(x.charAt(start));
-        System.out.println(x.charAt(end));
-        if(length%2!=0)
-        {
-            System.out.println("Not balanced");
-        }
-        else if(length%2==0)
-        {
-            for(int i=0;i<length/2;i++)
-            {
-                if(x.charAt(start)!=x.charAt(end))
-                {
-                	System.out.println("Not balanced");
-                }
-                start++;
-                end--;
-            }
-        }
-        
-        	
-        
+		for(int i=0;i<A.length;i++)
+		{
+			B[i] = A[i];
+			
+		}
+		A = B;
+		System.out.println(A.length);
 		
-		
+		for(int x: A)
+		{
+			System.out.print(x+" ");
+		}
 	     
 	}
 }
