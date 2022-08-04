@@ -16,7 +16,7 @@ public class Test {
 		{
 			B[i] = A[i];
 			
-		}
+		}  
 		A = B;
 		System.out.println(A.length);
 		

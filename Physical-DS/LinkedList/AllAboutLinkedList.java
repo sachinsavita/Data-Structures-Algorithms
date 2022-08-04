@@ -219,6 +219,7 @@ public class AllAboutLinkedList {
 					if(p.data>q.data)
 					{
 						flag++;
+						return;
 					}
 					p=p.next;
 					q=q.next;
