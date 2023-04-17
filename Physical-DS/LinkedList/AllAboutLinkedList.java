@@ -26,6 +26,11 @@ public class AllAboutLinkedList {
 	public void addAtFirst(int data)
 	{
 		Node newNode = new Node(data);
+		if(head==null)
+		{
+			head = newNode;
+			return;
+		}
 		newNode.next = head;
 		head = newNode;
 		System.out.println("Node with data " + newNode.data+ " is added at first! ");
