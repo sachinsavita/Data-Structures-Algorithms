@@ -21,7 +21,7 @@ public class CollectionLL {
 			System.out.print(ll.get(i)+" ");
 		}
 		ll.removeFirst();
-		ll.remove(0);
+		ll.removeLast();
 		System.out.println();
 		System.out.println(ll);
 		
